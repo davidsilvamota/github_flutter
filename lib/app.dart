@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_flutter/screens/home_screen.dart';
 import 'package:github_flutter/screens/splash_screen.dart';
 
 class App extends StatelessWidget {
@@ -9,7 +10,7 @@ class App extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SplashScreen(),
+        body: HomeScreen(),
       ),
     );
   }
