@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:github_flutter/screens/home_screen.dart';
-import 'package:github_flutter/screens/splash_screen.dart';
+import 'package:github_flutter/screens/login_page.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -10,8 +9,9 @@ class App extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: HomeScreen(),
+        body: LoginPage(),
       ),
+      initialRoute: '/',
     );
   }
 }
