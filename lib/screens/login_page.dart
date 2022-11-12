@@ -9,7 +9,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String email = '';
-  String senha = '';
+  String password = '';
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -47,7 +47,20 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(
                   height: 30,
                 ),
-                const ElevatedButton(onPressed: null, child: Text('Entrar'))
+                TextButton(
+                    style: TextButton.styleFrom(backgroundColor: Colors.indigo),
+                    onPressed: () => {
+                          if (email == '@')
+                            {Navigator.of(context).pushNamed('/home')}
+                          else
+                            {
+                              print('senha invalida'),
+                            }
+                        },
+                    child: const Text(
+                      'Entrar',
+                      style: TextStyle(color: Colors.white),
+                    ))
               ],
             ),
           )),

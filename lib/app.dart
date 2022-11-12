@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_flutter/screens/home_page.dart';
 import 'package:github_flutter/screens/login_page.dart';
 
 class App extends StatelessWidget {
@@ -6,12 +7,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: LoginPage(),
-      ),
       initialRoute: '/',
+      routes: {
+        "/": (context) => const LoginPage(),
+        '/home': (context) => const HomePage()
+      },
     );
   }
 }
